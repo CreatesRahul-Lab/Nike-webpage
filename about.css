@@ -282,3 +282,153 @@ footer {
      opacity: 1;
  }
 }
+
+/* Mobile Responsive Styles for About Page */
+@media only screen and (max-width: 768px) {
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  /* Fix hover effects on mobile */
+  nav ul:hover li a {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  
+  nav ul li a:hover {
+    transform: none;
+  }
+  
+  /* Animated text section */
+  .animated-text {
+    font-size: 3rem !important;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .animated-text img {
+    float: none !important;
+    position: relative !important;
+    height: auto !important;
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Animation fixes for mobile */
+  .text {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .athletes span {
+    position: relative;
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Adjust animation timing for mobile */
+  #we { animation-delay: 0.3s; }
+  #serve { animation-delay: 0.6s; }
+  #dream { animation-delay: 0.9s; }
+  #women { animation-delay: 1.2s; }
+  #team { animation-delay: 1.5s; }
+  #artist { animation-delay: 1.8s; }
+  #coach { animation-delay: 2.1s; }
+  #men { animation-delay: 2.4s; }
+  #athletes { animation-delay: 2.7s; }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Footer adjustments - SERVICES STYLE */
+  footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+  }
+  
+  .footer-container {
+    display: none;
+  }
+  
+  .footer-bottom {
+    background-color: #111;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-bottom ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom ul li {
+    margin: 0 8px 5px 0;
+  }
+  
+  .footer-bottom ul li a {
+    color: #fff;
+  }
+  
+  /* Image optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Zoom effect adjustment */
+  .zoom {
+    padding: 10px;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Smaller devices (phones) */
+@media only screen and (max-width: 480px) {
+  .animated-text {
+    font-size: 2rem !important;
+  }
+}

@@ -92,18 +92,18 @@ nav ul li a:hover:before {
     overflow: hidden; /* Hide overflowing content */
     white-space: nowrap; /* Prevent line breaks */
     border: 2px solid #333; /* Add a border */
-    padding: 10px; /* Padding inside the border */
+    padding: 15px; /* Increased padding for better visibility */
     box-sizing: border-box;
     background-color: #373739; /* Light background */
 }
 
 .marquee-content {
     display: inline-block;
-    animation: marquee 25s linear infinite; /* Scrolling animation */
+    animation: marquee 20s linear infinite; /* Slightly slower scrolling */
 }
 
 .marquee-content span {
-    margin-right: 50px; /* Space between items */
+    margin-right: 60px; /* More space between items */
     font-size: 24px;
     font-family: sans-serif;
     color: #333;
@@ -112,17 +112,19 @@ nav ul li a:hover:before {
 }
 
 .marquee-content img {
-    width: 50px; /* Set image size */
-    height: 50px;
+    width: 100px; /* Larger image size for better quality */
+    height: 100px;
     margin-right: 10px; /* Space between image and text */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.3)); /* Add subtle shadow for depth */
 }
 
 @keyframes marquee {
     from {
-        transform: translateX(200%); /* Start from the right */
+        transform: translateX(100%); /* Start from the right */
     }
     to {
-        transform: translateX(-200%); /* Move to the left */
+        transform: translateX(-180%); /* Move to the left */
     }
 }
 
@@ -462,4 +464,300 @@ footer {
 
 .footer-bottom ul li a:hover {
     color: #007BFF;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+  /* Core layout fixes */
+  body {
+    overflow-x: hidden;
+  }
+  
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Navigation fixes */
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  /* Fix hover effects on mobile */
+  nav ul:hover li a {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  
+  nav ul li a:hover {
+    transform: none;
+  }
+  
+  /* Banner adjustments */
+  .banner .content {
+    flex-direction: column;
+  }
+  
+  .banner .content h1 {
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .banner .content .right {
+    text-align: center;
+    transform: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 2em;
+  }
+  
+  .banner .image {
+    height: 300px;
+  }
+  
+  .banner .image img {
+    max-height: 100%;
+    width: auto;
+  }
+  
+  /* Grid layouts */
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .grid > * {
+    width: 100% !important;
+  }
+  
+  .grid-1 h2:nth-child(3) {
+    font-size: 2.5em;
+  }
+  
+  .grid-3 {
+    font-size: 2.5em;
+  }
+  
+  /* Footer adjustments - SERVICES STYLE */
+  footer {
+    margin-top: 0;
+    min-height: auto;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer .content {
+    padding: 15px 10px;
+  }
+  
+  .footer-container {
+    display: none;
+  }
+  
+  .footer-bottom {
+    background-color: #111;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-bottom ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom ul li a {
+    color: #fff;
+  }
+  
+  /* Animation fixes for mobile - replaces scroll-based animations with standard ones */
+  .autoRotate {
+    animation: mobileRotate 10s linear infinite;
+  }
+  
+  .autoShow {
+    animation: mobileShow 1s ease forwards;
+  }
+  
+  .autoBLur {
+    animation: mobileBlur 5s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes for mobile */
+  @keyframes mobileRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes mobileShow {
+    from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes mobileBlur {
+    0% { filter: blur(10px); }
+    25% { filter: blur(0); }
+    75% { filter: blur(0); }
+    100% { filter: blur(10px); }
+  }
+  
+  /* Image optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Marquee fix */
+  .marquee {
+    padding: 10px;
+    border-width: 1px;
+  }
+  
+  .marquee-content {
+    animation: mobilemarquee 18s linear infinite;
+  }
+  
+  .marquee-content img {
+    width: 70px; /* Larger size for mobile but still manageable */
+    height: 70px;
+    margin-right: 5px;
+  }
+  
+  .marquee-content span {
+    margin-right: 50px; /* More space between items */
+  }
+  
+  @keyframes mobilemarquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-200%); }
+  }
+  
+  /* Zoom effect adjustment */
+  .zoom {
+    padding: 10px;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Additional fixes for very small screens */
+@media only screen and (max-width: 480px) {
+  .banner .content h1 {
+    font-size: 3em;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 1.5em;
+  }
+  
+  .banner .image {
+    height: 200px;
+  }
+  
+  header img {
+    height: 25px;
+    margin: 2px;
+  }
+  
+  .grid-1 h2:nth-child(3) {
+    font-size: 2em;
+  }
+  
+  .grid-3 {
+    font-size: 2em;
+  }
+}
+
+/* Medium-sized devices (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .banner .content h1 {
+    font-size: 5em;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 2.5em;
+  }
+  
+  .banner .image {
+    height: 350px;
+  }
+  
+  .grid-1 h2:nth-child(3) {
+    font-size: 3em;
+  }
+  
+  .grid-3 {
+    font-size: 3em;
+  }
+  
+  /* Footer arrangement for tablets */
+  .footer-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .footer-section {
+    flex: 0 0 50%;
+    text-align: left;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    font-size: 12px;
+  }
+  
+  nav {
+    padding: 5px;
+  }
+  
+  .banner .image {
+    height: 250px;
+  }
+  
+  /* Ensure animations are visible in landscape */
+  .autoRotate, .autoShow, .autoBLur {
+    will-change: transform, opacity, filter;
+  }
+}
+
+/* Fix for very high pixel density screens (retina displays) */
+@media only screen and (min-resolution: 2dppx) {
+  img {
+    transform: translateZ(0); /* Hardware acceleration */
+  }
+  
+  .autoRotate, .autoShow, .autoBLur {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
 }

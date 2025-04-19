@@ -1,0 +1,565 @@
+/* Responsive CSS for Nike Website */
+
+/* Base responsive styles for all pages */
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  nav ul li {
+    margin: 8px 0;
+    text-align: center;
+  }
+  
+  .logo img {
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Banner */
+  .banner .content h1 {
+    font-size: 4em !important;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .banner .content .right {
+    text-align: center;
+    width: 100%;
+    transform: translateY(0);
+  }
+  
+  .banner .content .right h2 {
+    font-size: 2.5em;
+  }
+  
+  .banner .image {
+    height: 300px;
+  }
+  
+  .banner .image img {
+    height: auto;
+    width: 100%;
+  }
+  
+  /* Grid layouts */
+  .grid {
+    gap: 20px;
+  }
+  
+  .grid-1 h2:nth-child(3) {
+    font-size: 3em;
+  }
+  
+  .grid-3 {
+    font-size: 3em;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  /* About page */
+  .animated-text {
+    font-size: 40px;
+    height: auto;
+    padding: 20px 0;
+  }
+  
+  .zoom img {
+    height: auto !important;
+    width: 100% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  /* Navigation */
+  nav {
+    padding: 15px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  /* Banner */
+  .banner .content h1 {
+    font-size: 6em !important;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 3.5em;
+  }
+  
+  .banner .image {
+    height: 400px;
+  }
+  
+  /* Grid layouts */
+  .grid-1 h2:nth-child(3) {
+    font-size: 4em;
+  }
+  
+  .grid-3 {
+    font-size: 5em;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 0 0 50%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /* Banner */
+  .banner .content h1 {
+    font-size: 10em !important;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 5em;
+  }
+  
+  .banner .image {
+    height: 500px;
+  }
+  
+  /* Grid layouts */
+  .grid-1 h2:nth-child(3) {
+    font-size: 5em;
+  }
+  
+  .grid-3 {
+    font-size: 7em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Banner */
+  .banner .content h1 {
+    font-size: 13em !important;
+  }
+  
+  .grid-3 {
+    font-size: 8em;
+  }
+}
+
+/* Service page specific styles */
+@media only screen and (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+  
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul li {
+    margin: 5px 0;
+  }
+  
+  #service-img img {
+    float: none !important;
+    margin: 10px auto !important;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Contact page specific styles */
+@media only screen and (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 1.8em;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-form, .contact-info {
+    width: 100%;
+  }
+  
+  .contact-form form {
+    width: 100%;
+  }
+}
+
+/* Marquee responsive */
+@media only screen and (max-width: 768px) {
+  .marquee-content img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .marquee-content span {
+    margin-right: 20px;
+  }
+}
+
+/* Fix for grid layout on mobile */
+@media only screen and (max-width: 768px) {
+  .grid-2 div:nth-child(1),
+  .grid-2 div:nth-child(2),
+  .grid-2 div:nth-child(3),
+  .grid-2 div:nth-child(4) {
+    grid-column: 1 / 7;
+    grid-row: auto;
+  }
+  
+  .grid-5 div:nth-child(1),
+  .grid-5 div:nth-child(2),
+  .grid-5 div:nth-child(3),
+  .grid-5 div:nth-child(4) {
+    grid-column: 1 / 7;
+    grid-row: auto;
+  }
+}
+
+/* Form specific responsive styles */
+@media only screen and (max-width: 768px) {
+  /* Registration form */
+  .panel {
+    margin: 10px;
+  }
+  
+  .form-control {
+    max-width: 100%;
+  }
+  
+  /* Contact form */
+  .contact-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .map-section, .form-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .feedback-form input, 
+  .feedback-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Fix for images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Make sure all containers are properly sized */
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* Grid system mobile fixes */
+@media only screen and (max-width: 576px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .grid > * {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+
+/* Additional fixes for very small devices */
+@media only screen and (max-width: 375px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .banner .content h1 {
+    font-size: 3em !important;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 2em;
+  }
+  
+  .grid-3 {
+    font-size: 2.5em;
+  }
+  
+  header img {
+    height: 30px;
+  }
+}
+
+/* Ensure toast messages are responsive */
+@media only screen and (max-width: 576px) {
+  .toast {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Ensure proper spacing for animated text on about page */
+@media only screen and (max-width: 768px) {
+  .animated-text .text {
+    margin-bottom: 10px;
+  }
+  
+  #we, #serve {
+    margin-left: 10px;
+  }
+  
+  .athletes span {
+    position: relative;
+  }
+}
+
+/* Mobile Navigation - Hamburger Menu */
+@media only screen and (max-width: 768px) {
+  /* Adding a responsive menu toggle solution */
+  nav ul {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  nav.active ul {
+    display: flex; /* Show when active */
+  }
+  
+  /* We will add a JavaScript toggle elsewhere if needed, 
+     but this CSS provides the styling foundation */
+  
+  /* Fix hover effects on mobile */
+  nav ul:hover li a {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  
+  nav ul li a:hover {
+    transform: none;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+/* Hamburger Menu Styles */
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  
+  /* Hamburger animation when active */
+  nav.active .hamburger-menu span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  nav.active .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  nav.active .hamburger-menu span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Improved grid responsiveness */
+@media only screen and (max-width: 992px) {
+  .grid {
+    gap: 30px;
+  }
+  
+  /* Make sure grid children are responsive */
+  .grid > * {
+    overflow: hidden;
+  }
+}
+
+/* Additional image responsiveness fixes */
+@media only screen and (max-width: 768px) {
+  /* Ensure all images are responsive */
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  
+  /* Fix for inline styles that may override responsive behavior */
+  [style*="height"], [style*="width"] {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Fix for float issues on smaller screens */
+  [style*="float: right"], [style*="float:right"],
+  [style*="float: left"], [style*="float:left"] {
+    float: none !important;
+    display: block;
+    margin: 10px auto !important;
+  }
+}
+
+/* Portrait orientation specific styles */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Adjust large images for portrait mode */
+  .banner .image {
+    height: 250px;
+  }
+  
+  .animated-text {
+    padding: 20px;
+    font-size: 30px !important;
+  }
+  
+  /* Tighten spacing */
+  .grid {
+    gap: 15px;
+  }
+}
+
+/* Landscape orientation specific styles */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  /* Optimize header for landscape */
+  header {
+    padding: 5px 0;
+  }
+  
+  nav {
+    padding: 5px 15px;
+  }
+  
+  /* Adjust banner for landscape */
+  .banner .content h1 {
+    font-size: 5em !important;
+  }
+  
+  .banner .image {
+    height: 200px;
+  }
+  
+  /* Animated text on about page */
+  .animated-text {
+    height: auto;
+    min-height: 70vh;
+  }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 11px;
+  }
+  
+  nav ul li a {
+    font-size: 14px;
+  }
+  
+  .banner .content h1 {
+    font-size: 2.5em !important;
+  }
+  
+  .banner .content .right h2 {
+    font-size: 1.5em;
+  }
+  
+  .footer-section {
+    padding: 0 5px;
+  }
+}
+
+/* Accessibility and usability improvements */
+@media only screen and (max-width: 768px) {
+  /* Improve touch targets for mobile */
+  button, 
+  input[type="submit"],
+  nav ul li a,
+  .footer-section ul li a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Increase font size for better readability */
+  p, li, input, textarea, button {
+    font-size: 16px;
+  }
+  
+  /* Fix for any inline elements that might overflow */
+  main, section, div, article, aside, figure {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure form elements are properly sized */
+  input, textarea, select, button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Fix for any horizontal scrolling issues */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+} 

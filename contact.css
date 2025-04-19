@@ -174,3 +174,93 @@ nav ul li a:hover:before {
     width: 50px;
 
 }
+
+/* Mobile Responsive Styles for Contact Page */
+@media only screen and (max-width: 768px) {
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  /* Fix hover effects on mobile */
+  nav ul:hover li a {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  
+  nav ul li a:hover {
+    transform: none;
+  }
+  
+  /* Contact container */
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .map-section, .form-section {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .map-section {
+    margin-top: 70px; /* To account for the fixed navigation */
+  }
+  
+  .map-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .address, .contact-info {
+    text-align: center;
+  }
+  
+  /* Form elements */
+  .feedback-form input, 
+  .feedback-form textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .feedback-form button {
+    padding: 12px;
+  }
+  
+  .feedback-form h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* Smaller devices (phones) */
+@media only screen and (max-width: 480px) {
+  .map-section, .form-section {
+    padding: 15px;
+  }
+  
+  .map-section h1 {
+    font-size: 24px;
+  }
+  
+  .feedback-form h2 {
+    font-size: 20px;
+  }
+  
+  nav ul li a {
+    font-size: 16px;
+  }
+}

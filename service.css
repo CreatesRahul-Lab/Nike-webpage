@@ -96,8 +96,6 @@ nav ul li a:hover:before {
     transform: scaleX(1);
 }
 
-
-
 .logo img{
     height: 50px;
     width: 50px;
@@ -128,3 +126,89 @@ footer {
     padding: 20px 0;
 }
 copyright { text-align: center; background-color: #111; color: #fff; padding: 10px 0; }
+
+/* Mobile Responsive Styles for Service Page */
+@media only screen and (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    padding: 15px 0;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+  }
+  
+  /* Navigation */
+  nav {
+    padding: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav ul li {
+    margin: 8px 0;
+  }
+  
+  /* Fix hover effects on mobile */
+  nav ul:hover li a {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  
+  nav ul li a:hover {
+    transform: none;
+  }
+  
+  /* Container and section adjustments */
+  .container {
+    width: 90%;
+    padding: 0 10px;
+  }
+  
+  section {
+    padding: 15px 0;
+  }
+  
+  /* Image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+    float: none !important;
+    display: block;
+    margin: 15px auto !important;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 15px 0;
+  }
+  
+  /* Text sizing */
+  h2 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* Smaller devices (phones) */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  
+  nav ul li a {
+    font-size: 16px;
+  }
+  
+  section {
+    padding: 10px 0;
+  }
+}
